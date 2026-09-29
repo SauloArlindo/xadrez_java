@@ -13,6 +13,11 @@ public class Rook extends ChessPiece{
     public String toString(){
         return "R";
     }
+
+    @Override
+    public boolean[][] possibleMoves() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
     
 
 }

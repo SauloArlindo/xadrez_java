@@ -32,7 +32,10 @@ public class ChessMatch {
     }
     private void validateSourcePosition(Position position){
         if(!board.thereIsAPiece(position)){
-            throw new ChessException("Posição sem peça  ");
+            throw new ChessException("Posição de origem sem peça  ");
+        }
+        if(!board.piece(position).isThereAnyPossibleMove()){
+            throw new ChessException("Peça sem movimentos possiveis");
         }
     }
     private Piece makeMove(Position source , Position target){
