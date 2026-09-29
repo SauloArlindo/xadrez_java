@@ -11,7 +11,7 @@ public class Board {
         }
         this.columns = columns;
         this.rows = rows;
-        pieces = new Piece[rows][rows];
+        pieces = new Piece[rows][columns];
     }
 
     public int getRows() {

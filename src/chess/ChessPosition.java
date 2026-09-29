@@ -6,7 +6,7 @@ public class ChessPosition {
     private char collumn;
     private int row;
 
-    public ChessPosition(char collumn, int row) {
+    public ChessPosition(char collumn, int row ) {
         if(collumn < 'a' || collumn  > 'h' || row < 1 || row > 8){
                 throw new ChessException("Valores Validos de a1 ate h8");
         }
@@ -26,7 +26,7 @@ public class ChessPosition {
         return new Position(8 - row , collumn - 'a'); 
     }
     protected static ChessPosition fromPosition(Position position){
-        return new ChessPosition((char)'a' - position.getColumn(), 8 - position.getRow());
+		return new ChessPosition((char)('a' + position.getColumn()), 8 - position.getRow());
     }
 
     @Override 
