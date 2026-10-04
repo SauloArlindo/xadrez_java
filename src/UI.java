@@ -1,3 +1,4 @@
+import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.ChessPosition;
 import chess.Color;
@@ -40,7 +41,12 @@ public class UI {
             throw new InputMismatchException("Valores valido de a1 a h8");
         }
     }
-    
+    public static void PrintMatch(ChessMatch chessMatch){
+        printBoard(chessMatch.getPieces());
+        System.out.println();
+        System.out.println("Turn : " + chessMatch.getTurn());
+        System.out.println("waiting player :" + chessMatch.getCurrentPlayer());
+    }
 
     public static void printBoard(ChessPiece[][] pieces){
         for(int i = 0 ; i < pieces.length; i++){
